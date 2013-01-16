@@ -32,7 +32,7 @@ Images can be resized and cropped with three different methods:
 
 `resize_to_limit` and `resize_to_fill` will only be performed if the image is currently larger than the requested width and height.
 
-```
+```ruby
 # Create a large version
 image.resize_to_limit 1000, 1000
 
@@ -44,7 +44,7 @@ When saving a file, you must provide a destination. EasyImage will return the ac
 
 The second optional parameter is the JPG quality setting to use if a JPG is being created.
 
-```
+```ruby
 output_path = image.save('/desired/output/path.jpg', 80)
 ```
 
