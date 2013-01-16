@@ -37,7 +37,7 @@ Images can be resized and cropped with three different methods:
 image.resize_to_limit 1000, 1000
 
 # Crop to create a thumbnail
-other_image.resize_to_fit 100, 100
+other_image.resize_to_fill 100, 100
 ```
 
 When saving a file, you must provide a destination. EasyImage will return the actual output path, which may differ from the requested destination due to setting the proper file extension.
