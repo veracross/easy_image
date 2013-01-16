@@ -1,6 +1,8 @@
 require 'mime_inspector'
 require 'dimensions'
 require 'fileutils'
+require 'easy_image/vips'
+require 'easy_image/mini_magick'
 
 ##
 # Provides a simple API to performing common image operations using
@@ -84,9 +86,9 @@ class EasyImage
     end
 
     if ext == 'gif'
-      processor = EasyImage::MiniMagick.new @path
+      processor = MiniMagick.new @path
     else
-      processor = EasyImage::Vips.new @path
+      processor = Vips.new @path
     end
 
     begin
@@ -99,7 +101,7 @@ class EasyImage
     # Vips had an issue with at least one PNG, so if there is an error
     # processing a file, fall back to ImageMagick
     rescue VIPS::Error
-      processor = EasyImage::MiniMagick.new @path
+      processor = MiniMagick.new @path
       retry
     end
   end
