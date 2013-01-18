@@ -4,16 +4,10 @@ A library that wraps up ruby-vips and mini_magick to provide efficient processin
 
 ## Installation
 
-Install the latest stable release:
-
-```
-[sudo] gem install easy_image
-```
-
 In Rails, add it to your Gemfile:
 
 ```ruby
-gem 'easy_image'
+gem 'easy_image', :git => 'git://github.com/veracross/easy_image.git'
 ```
 
 ## Usage
