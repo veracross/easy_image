@@ -10,6 +10,8 @@ In Rails, add it to your Gemfile:
 gem 'easy_image', :git => 'git://github.com/veracross/easy_image.git'
 ```
 
+If you are using OS X Mountain Lion for development, be sure to manually install the `ruby-vips` faker from https://github.com/veracross/ruby-vips-faker.
+
 ## Usage
 
 EasyImage can read and write JPG, PNG and GIF files.

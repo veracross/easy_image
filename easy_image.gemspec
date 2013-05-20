@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'easy_image'
-  s.version     = '0.5.3'
+  s.version     = '0.5.4'
   s.date        = '2013-05-20'
 
   s.summary     = "Exceedingly simple image operations powered by vips and imagemagick"
@@ -11,9 +11,9 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://github.com/veracross/easy_image'
   s.license     = 'MIT'
 
-  s.extensions  = ["ext/mkrf_conf.rb"]
   s.files       = ['lib/easy_image.rb', 'lib/easy_image/vips.rb', 'lib/easy_image/mini_magick.rb']
 
+  s.add_runtime_dependency 'ruby-vips', '>= 0.3.4', '< 1.0'
   s.add_runtime_dependency 'mini_magick', '>= 3.4', '< 4.0'
   s.add_runtime_dependency 'dimensions', '>= 1.2', '< 2.0'
   s.add_runtime_dependency 'mime_inspector', '>= 0.5', '< 1.0'
