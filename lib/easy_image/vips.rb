@@ -76,7 +76,7 @@ class EasyImage
       if jpeg? # find the shrink ratio for loading
         shrink_factor = [8, 4, 2, 1].find {|sf| 1.0 / ratio >= sf }
         shrink_factor = 1 if shrink_factor == nil
-        @image = ::VIPS::Image.jpeg @path, 
+        @image = ::VIPS::Image.jpeg @path,
             :shrink_factor => shrink_factor, :sequential => true
         ratio = get_ratio width, height, min_or_max
       elsif png?

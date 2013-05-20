@@ -1,8 +1,12 @@
 require 'mime_inspector'
 require 'dimensions'
 require 'fileutils'
-require 'easy_image/vips'
 require 'easy_image/mini_magick'
+
+if not RUBY_PLATFORM =~ /darwin/
+  require 'easy_image/vips'
+end
+
 
 ##
 # Provides a simple API to performing common image operations using
@@ -64,7 +68,7 @@ class EasyImage
 
   ##
   # Saves the queued changes to the path specified, returning the path in case the extension was changed
-  # 
+  #
   # @param [String] path  the desired filesystem output path
   # @param [Integer] quality  if the output is a jpg, use this for the quality setting
   # @return [String] the filesystem path to the saved version - this may be different than the path parameter because for format conversion
@@ -85,7 +89,7 @@ class EasyImage
       return path
     end
 
-    if ext == 'gif'
+    if ext == 'gif' or RUBY_PLATFORM =~ /darwin/
       processor = MiniMagick.new @path
     else
       processor = Vips.new @path
