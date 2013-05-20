@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'easy_image'
-  s.version     = '0.5.1'
+  s.version     = '0.5.2'
   s.date        = '2013-05-20'
 
   s.summary     = "Exceedingly simple image operations powered by vips and imagemagick"
@@ -12,10 +12,6 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.files       = ['lib/easy_image.rb', 'lib/easy_image/vips.rb', 'lib/easy_image/mini_magick.rb']
-
-  if not RUBY_PLATFORM =~ /darwin/
-    s.add_runtime_dependency 'ruby-vips', '>= 0.3.4', '< 1.0'
-  end
 
   s.add_runtime_dependency 'mini_magick', '>= 3.4', '< 4.0'
   s.add_runtime_dependency 'dimensions', '>= 1.2', '< 2.0'
