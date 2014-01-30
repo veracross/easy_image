@@ -1,5 +1,4 @@
 require 'mime_inspector'
-require 'dimensions'
 require 'fileutils'
 require 'easy_image/mini_magick'
 
@@ -25,7 +24,7 @@ class EasyImage
     @mime_type = mime_type
     @operations = []
     @path = path
-    @width, @height = Dimensions.dimensions path
+    @width, @height = ::MiniMagick::Image.open(path)['dimensions']
   end
 
   ##

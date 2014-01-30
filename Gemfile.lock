@@ -1,0 +1,30 @@
+GIT
+  remote: git://github.com/veracross/mime_inspector.git
+  revision: 33f5edffb3718de4ce54e050bb1314f7d0799743
+  specs:
+    mime_inspector (0.5.2)
+      mimemagic (>= 0.2.0, < 1.0)
+
+PATH
+  remote: .
+  specs:
+    easy_image (0.5.4)
+      mime_inspector (>= 0.5, < 1.0)
+      mini_magick (>= 3.4, < 4.0)
+      ruby-vips (>= 0.3.4, < 1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    mimemagic (0.2.1)
+    mini_magick (3.7.0)
+      subexec (~> 0.2.1)
+    ruby-vips (0.3.6)
+    subexec (0.2.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  easy_image!
+  mime_inspector!
