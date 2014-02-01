@@ -15,6 +15,5 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'ruby-vips', '>= 0.3.4', '< 1.0'
   s.add_runtime_dependency 'mini_magick', '>= 3.4', '< 4.0'
-  s.add_runtime_dependency 'dimensions', '>= 1.2', '< 2.0'
   s.add_runtime_dependency 'mime_inspector', '>= 0.5', '< 1.0'
 end
